@@ -97,7 +97,3 @@ rightArrow.addEventListener("click",function( event ){
 	}
 
 })
-
-
-//-------------CALL TO ACTION-----------------------------------
-var fleche = window.querySelector('#')
