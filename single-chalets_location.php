@@ -1,8 +1,8 @@
 <?php
 
 /*
- * Template Name: Fiche Chalet
- * Template Post Type: chalets_vente
+ * Template Name: Fiche Chalet Location
+ * Template Post Type: chalets_location
 */
 
 
@@ -21,7 +21,6 @@ add_filter( 'ocean_post_layout_class', 'chalets_vente_layout_class', 20 );
 //Récupère header OceanWP
 get_header(); ?>
 
-	
 
 <div id="content" class="site-content clr">
 
@@ -36,7 +35,7 @@ get_header(); ?>
 			<div id="lightFilter">
 			</div>
 			<div id="caracQuartier" class ="caracteristiqueChalet">Quartier : <?php the_field("gc_quartier");?></div>
-			<div id="caracPrix" class ="caracteristiqueChalet">Prix : <?php echo number_format(get_field("gc_prix"),0,","," ") ;?> €</div>
+			<div id="caracPrix" class ="caracteristiqueChalet">Prix : <?php the_field("gc_prix");?> €</div>
 			<div id="caracSuperficie" class ="caracteristiqueChalet">Superficie : <?php the_field("gc_superficie");?> m²</div>
 
 			<div id="sliderThumbnails">
@@ -290,40 +289,12 @@ get_header(); ?>
 		<div id="fixedBtnWrapper" class="CTABtn-visible">
 
 			<div id="btnContact" class="button-wrapper">
-				<span>CONTACTER L'AGENCE</span>
+				<a href="">
+					<span>CONTACTER L'AGENCE</span>
+				</a>
 			</div>			
 		</div>
 		<span id="arrowBtn" class="arrowCTA-visible">></span>
-
-	</section>
-
-	<aside id="contactForm" class="contact-form-hidden">
-		<form action="traitement-formulaire.php" method="post">
-
-			<div id="formName" class="form-input">
-				<label for="contact_name">Nom</label>
-				<input type="text" name="contact_name">
-				<label for="contact_first_name">Prénom</label>
-				<input type="text" name="contact_first_name">
-			</div>
-
-			<div id="formMail" class="form-input">
-				<label for="contact_mail">Email</label>
-				<input type="email" name="contact_mail">
-			</div>
-
-			<div id="formMessage" class="form-input">
-				<label for="contact_message">Message</label>
-				<input type="textarea" name="contact_message">
-			</div>
-
-			<div id="c">
-		        <button type="submit">Envoyer le message</button>
-		    </div>
-
-		</form>
-		
-	</aside>
 
 </div><!-- #content -->
 

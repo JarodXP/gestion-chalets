@@ -318,6 +318,18 @@ h3{
 	color: white;
 }
 
+.arrowCTA-close{
+	right: 50vw;
+	width: 75px;
+	height: 75px;
+	border-radius: 50% 0 0 50%;
+	text-align: center;
+	font-size: 3em;
+	color: white;
+	background-color: #25303c;
+
+}
+
 
 #btnContact {
 	width: 200px;
@@ -443,5 +455,65 @@ h3{
 	padding: 0px;
 	margin: 0px;
 	font-size: 0.8em;
+}
+
+/*----------------CONTACT FORM--------------*/
+#contactForm{
+	position: fixed;
+	top:20vh;
+	right: 0px;
+	width: 50vw;
+	background-color: #25303c;
+	padding: 5vh 5vw;
+	z-index: 10;
+	box-shadow: 6px 6px 6px black;
+	color: white;
+	box-sizing: border-box;
+}
+
+.contact-form-hidden{
+	display: none;
+}
+
+.contact-form-display{
+	display: block;
+}
+
+#contactForm>form{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+
+}
+#formName{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.form-input {
+	padding: 1% 0;
+}
+
+#formName,#formFirstName{
+	width: 50%;
+}
+
+{
+	width: 200px;
+	height: 65px;
+	border:3px solid white;
+	background-color: #25303c;
+	color: white;
+	box-sizing: border-box;
+	cursor: pointer;
+
+}
+
+#formSubmit:hover {
+	background-color: #6ec1e4;
+	border-color: #6ec1e4;
+	color: #25303c;
 }
 

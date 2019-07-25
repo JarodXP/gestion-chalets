@@ -99,23 +99,49 @@ rightArrow.addEventListener("click",function( event ){
 })
 
 //-----------------TOGGLE BOUTON CTA----------------
-var btnCTA = document.getElementById('fixedBtnWrapper');
-var arrowCTA = document.getElementById('arrowBtn');
+function addEventsArrowCTA(){
+	var btnCTA = document.getElementById('fixedBtnWrapper');
+	var arrowCTA = document.getElementById('arrowBtn');
 
-arrowCTA.addEventListener("click", function(event){
-	if (btnCTA.className == 'CTABtn-visible'){
+	arrowCTA.addEventListener("click", function(event){
+		if (btnCTA.className == 'CTABtn-visible'){
+			btnCTA.className='CTABtn-hidden';
+			arrowCTA.innerText='CONTACT';
+			arrowCTA.className='arrowCTA-hidden';
+
+		}
+
+		else if(contactForm.className=='contact-form-display'){
+			contactForm.className='contact-form-hidden';
+			btnCTA.className='CTABtn-visible';
+			arrowCTA.className='arrowCTA-visible';
+		}
+
+		else {
+			btnCTA.className='CTABtn-visible';
+			arrowCTA.className='arrowCTA-visible';
+			arrowCTA.innerText='>';
+		}
+	})
+}
+
+
+
+//---------------FORMULAIRE DE CONTACT -------------
+function addEventBtnCTA(){
+	var contactForm=document.getElementById("contactForm");
+	var btnCTA = document.getElementById('fixedBtnWrapper');
+	var arrowCTA = document.getElementById('arrowBtn');
+
+	btnCTA.addEventListener("click", function(event){
+		contactForm.className='contact-form-display';
 		btnCTA.className='CTABtn-hidden';
-		arrowCTA.innerText='CONTACT';
-		arrowCTA.className='arrowCTA-hidden';
+		arrowCTA.className='arrowCTA-close';
+		console.log("En attente");
+		})
+}
 
-	}
-
-	else{
-		btnCTA.className='CTABtn-visible';
-		arrowCTA.innerText='>';
-		arrowCTA.className='arrowCTA-visible';
-	}
-})
-
+addEventsArrowCTA();
+addEventBtnCTA();
 
 
