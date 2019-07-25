@@ -98,3 +98,24 @@ rightArrow.addEventListener("click",function( event ){
 
 })
 
+//-----------------TOGGLE BOUTON CTA----------------
+var btnCTA = document.getElementById('fixedBtnWrapper');
+var arrowCTA = document.getElementById('arrowBtn');
+
+arrowCTA.addEventListener("click", function(event){
+	if (btnCTA.className == 'CTABtn-visible'){
+		btnCTA.className='CTABtn-hidden';
+		arrowCTA.innerText='CONTACT';
+		arrowCTA.className='arrowCTA-hidden';
+
+	}
+
+	else{
+		btnCTA.className='CTABtn-visible';
+		arrowCTA.innerText='>';
+		arrowCTA.className='arrowCTA-visible';
+	}
+})
+
+
+

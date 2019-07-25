@@ -288,7 +288,7 @@ get_header(); ?>
 			</div>
 		</div>
 
-		<div id="fixedBtnWrapper">
+		<div id="fixedBtnWrapper" class="CTABtn-visible">
 
 			<div id="btnContact" class="button-wrapper">
 				<a href="">
@@ -296,7 +296,7 @@ get_header(); ?>
 				</a>
 			</div>			
 		</div>
-		<span id="flecheBtn">></span>
+		<span id="arrowBtn" class="arrowCTA-visible">></span>
 
 	</section>
 

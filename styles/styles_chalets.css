@@ -263,6 +263,16 @@ h3{
 	margin-left: 10vh;
 }
 
+.CTABtn-visible{
+	display: block;
+}
+
+.CTABtn-hidden{
+	display: none;
+}
+
+
+
 #fixedBtnWrapper{
 	position: fixed;
 	right:0px;
@@ -276,24 +286,38 @@ h3{
 
 }
 
-#flecheBtn{
+#arrowBtn{
 	position: fixed;
-	top:20vh;
-	right: 190px;
-	content: ">";
 	display: block;
-	background-color: white;
+	top:20vh;
+	box-shadow: 6px 6px 6px #25303c;
+	z-index: 11;
+	cursor: pointer;
+
+}
+
+.arrowCTA-visible{	
+	right: 190px;
 	width: 75px;
 	height: 75px;
 	border-radius: 50% 0 0 50%;
 	text-align: center;
 	font-size: 3em;
 	color: #6ec1e4;
-	background-color: #FFF;
-	box-shadow: 6px 6px 6px #25303c;
-	z-index: 11;
-
+	background-color: white;
 }
+
+.arrowCTA-hidden{
+	right: 0px;
+	font-size: 1em;
+	font-weight:bold;
+	writing-mode: vertical-lr;
+	text-orientation: upright;
+	padding: 5px;
+	background-color: #6ec1e4;
+	color: white;
+}
+
 
 #btnContact {
 	width: 200px;
