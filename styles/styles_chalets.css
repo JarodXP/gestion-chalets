@@ -271,12 +271,12 @@ h3{
 	height: 75px;
 	line-height: 75px;
 	width: 190px;
-	box-shadow: -6px 6px 6px #25303c;
-	z-index: 20;
+	box-shadow: 6px 6px 6px #25303c;
+	z-index: 12;
 
 }
 
-#fixedBtnWrapper::before{
+#flecheBtn{
 	position: fixed;
 	top:20vh;
 	right: 190px;
@@ -290,7 +290,9 @@ h3{
 	font-size: 3em;
 	color: #6ec1e4;
 	background-color: #FFF;
-	box-shadow: -6px 6px 6px #25303c;
+	box-shadow: 6px 6px 6px #25303c;
+	z-index: 11;
+
 }
 
 #btnContact {
@@ -418,3 +420,4 @@ h3{
 	margin: 0px;
 	font-size: 0.8em;
 }
+

@@ -97,3 +97,4 @@ rightArrow.addEventListener("click",function( event ){
 	}
 
 })
+

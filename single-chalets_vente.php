@@ -289,13 +289,14 @@ get_header(); ?>
 		</div>
 
 		<div id="fixedBtnWrapper">
+
 			<div id="btnContact" class="button-wrapper">
 				<a href="">
 					<span>CONTACTER L'AGENCE</span>
 				</a>
-			</div>
-			
+			</div>			
 		</div>
+		<span id="flecheBtn">></span>
 
 	</section>
 
