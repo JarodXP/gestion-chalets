@@ -27,7 +27,7 @@ get_header(); ?>
 
 	<h2 id="nomChalet"><?php esc_html(the_title());?></h2>
 
-	<div id="sectionSlider">
+	<?php echo '<div id="sectionSlider" style="background-image:url('.WP_CONTENT_URL.'/uploads/2019/07/wood-3321348_1280.jpg)">'?>
 
 	</div>
 
@@ -69,12 +69,12 @@ get_header(); ?>
 				<div id="disposition">
 
 					<div class="caseDispo">						
-						<img class="iconeBien" src="http://15.188.4.60/wp-content/uploads/2019/07/surface-bleu.png">
+						<img class="iconeBien" src=<?php echo '"'.WP_CONTENT_URL.'/uploads/2019/07/surface-bleu.png">'?>
 						<p><?php echo the_field("gc_superficie").' m²'; ?></p>
 					</div>
 
 					<div class="caseDispo">						
-						<img class="iconeBien" src="http://15.188.4.60/wp-content/uploads/2019/07/plan-bleu.png">
+						<img class="iconeBien" src=<?php echo '"'.WP_CONTENT_URL.'/uploads/2019/07/plan-bleu.png">'?>
 						<p>
 							<?php
 							//vérif singulier / pluriel
@@ -90,7 +90,7 @@ get_header(); ?>
 					</div>
 
 					<div class="caseDispo">						
-						<img class="iconeBien" src="http://15.188.4.60/wp-content/uploads/2019/07/chambre-bleu.png">
+						<img class="iconeBien" src=<?php echo '"'.WP_CONTENT_URL.'/uploads/2019/07/chambre-bleu.png">'?>
 						<p>
 							<?php
 							//vérif singulier / pluriel
@@ -106,7 +106,7 @@ get_header(); ?>
 					</div>
 
 					<div class="caseDispo">						
-						<img class="iconeBien" src="http://15.188.4.60/wp-content/uploads/2019/07/sdb-bleu.png">
+						<img class="iconeBien" src=<?php echo '"'.WP_CONTENT_URL.'/uploads/2019/07/sdb-bleu.png">'?>
 						<p>
 							<?php
 							//vérif singulier / pluriel
@@ -122,7 +122,7 @@ get_header(); ?>
 					</div>
 
 					<div class="caseDispo">						
-						<img class="iconeBien" src="http://15.188.4.60/wp-content/uploads/2019/07/stairs-bleu.png">
+						<img class="iconeBien" src=<?php echo '"'.WP_CONTENT_URL.'/uploads/2019/07/stairs-bleu.png">'?>
 						<p>
 							<?php
 							//vérif singulier / pluriel
@@ -155,27 +155,27 @@ get_header(); ?>
 										foreach ($arrInterieurs as $key => $amenagement) {
 											switch ($amenagement) {
 												case 'Cuisine équipée':
-												echo '<div class="amenagement-interieur"><img alt="Cuisine équipée" src="http://15.188.4.60/wp-content/uploads/2019/07/hotte-bleu.png"><p>Cuisine équipée</p></div>';
+												echo '<div class="amenagement-interieur"><img alt="Cuisine équipée" src="'.WP_CONTENT_URL.'/uploads/2019/07/hotte-bleu.png"><p>Cuisine équipée</p></div>';
 												break;
 
 											case 'Cuisine américaine':
-												echo '<div class="amenagement-interieur"><img alt="Cuisine américaine" src="http://15.188.4.60/wp-content/uploads/2019/07/cuisineAmericaine-bleu.png"><p>Cuisine américaine</p></div>';
+												echo '<div class="amenagement-interieur"><img alt="Cuisine américaine" src="'.WP_CONTENT_URL.'/uploads/2019/07/cuisineAmericaine-bleu.png"><p>Cuisine américaine</p></div>';
 												break;
 
 											case 'Véranda':
-												echo '<div class="amenagement-interieur"><img alt="Véranda" src="http://15.188.4.60/wp-content/uploads/2019/07/veranda-bleu.png"><p>Véranda</p></div>';
+												echo '<div class="amenagement-interieur"><img alt="Véranda" src="'.WP_CONTENT_URL.'/uploads/2019/07/veranda-bleu.png"><p>Véranda</p></div>';
 												break;
 
 											case 'Dressing':
-												echo '<div class="amenagement-interieur"><img alt="Dressing" src="http://15.188.4.60/wp-content/uploads/2019/07/cintre-bleu.png"><p>Dressing</p></div>';
+												echo '<div class="amenagement-interieur"><img alt="Dressing" src="'.WP_CONTENT_URL.'/uploads/2019/07/cintre-bleu.png"><p>Dressing</p></div>';
 												break;
 
 											case 'Cheminée':
-												echo '<div class="amenagement-interieur"><img alt="Cheminée" src="http://15.188.4.60/wp-content/uploads/2019/07/cheminee-bleu.png"><p>Cheminée</p></div>';
+												echo '<div class="amenagement-interieur"><img alt="Cheminée" src="'.WP_CONTENT_URL.'/uploads/2019/07/cheminee-bleu.png"><p>Cheminée</p></div>';
 												break;
 
 											default:
-												echo '<div class="amenagement-interieur"><img alt="'.$amenagement.'" src="http://15.188.4.60/wp-content/uploads/2019/07/like-bleu.png"><p>'.$amenagement.'</p></div>';
+												echo '<div class="amenagement-interieur"><img alt="'.$amenagement.'" src="'.WP_CONTENT_URL.'/uploads/2019/07/like-bleu.png"><p>'.$amenagement.'</p></div>';
 												
 												break;
 											}
@@ -196,23 +196,23 @@ get_header(); ?>
 									foreach ($arrExterieurs as $key => $amenagement) {
 										switch ($amenagement) {
 											case 'Garage fermé':
-											echo '<div class="amenagement-exterieur"><img alt="Garage fermé" src="http://15.188.4.60/wp-content/uploads/2019/07/garage-bleu.png"><p>Garage fermé</p></div>';
+											echo '<div class="amenagement-exterieur"><img alt="Garage fermé" src="'.WP_CONTENT_URL.'/uploads/2019/07/garage-bleu.png"><p>Garage fermé</p></div>';
 											break;
 
 											case 'Garage avec prise électrique':
-											echo '<div class="amenagement-exterieur"><img alt="Garage avec prise électrique" src="http://15.188.4.60/wp-content/uploads/2019/07/electricite-bleu.png"><p>Garage avec prise électrique</p></div>';
+											echo '<div class="amenagement-exterieur"><img alt="Garage avec prise électrique" src="'.WP_CONTENT_URL.'/uploads/2019/07/electricite-bleu.png"><p>Garage avec prise électrique</p></div>';
 											break;
 
 											case 'Coin barbecue':
-											echo '<div class="amenagement-exterieur"><img alt="Coin barbecue" src="http://15.188.4.60/wp-content/uploads/2019/07/BBQ-bleu.png"><p>Coin barbecue</p></div>';
+											echo '<div class="amenagement-exterieur"><img alt="Coin barbecue" src="'.WP_CONTENT_URL.'/uploads/2019/07/BBQ-bleu.png"><p>Coin barbecue</p></div>';
 											break;
 
 											case 'Jardin':
-											echo '<div class="amenagement-exterieur"><img alt="Jardin" src="http://15.188.4.60/wp-content/uploads/2019/07/jardin-bleu.png"><p>Jardin</p></div>';
+											echo '<div class="amenagement-exterieur"><img alt="Jardin" src="'.WP_CONTENT_URL.'/uploads/2019/07/jardin-bleu.png"><p>Jardin</p></div>';
 											break;
 
 											default:
-												echo '<div class="amenagement-exterieur"><img alt="'.$amenagement.'" src="http://15.188.4.60/wp-content/uploads/2019/07/like-bleu.png"><p>'.$amenagement.'</p></div>';
+												echo '<div class="amenagement-exterieur"><img alt="'.$amenagement.'" src="'.WP_CONTENT_URL.'/uploads/2019/07/like-bleu.png"><p>'.$amenagement.'</p></div>';
 												
 											break;
 										}
@@ -238,39 +238,39 @@ get_header(); ?>
 					foreach ($arrCheckBox as $key => $service) {
 						switch ($service) {
 							case 'Sauna':
-								echo '<div class="service"><img alt="sauna" src="http://15.188.4.60/wp-content/uploads/2019/07/sauna-blanc.png"><p>Sauna</p></div>';
+								echo '<div class="service"><img alt="sauna" src="'.WP_CONTENT_URL.'/uploads/2019/07/sauna-blanc.png"><p>Sauna</p></div>';
 								break;
 
 							case 'Hammam':
-								echo '<div class="service"><img alt="Hammam" src="http://15.188.4.60/wp-content/uploads/2019/07/hammam-blanc.png"><p>Hammam</p></div>';
+								echo '<div class="service"><img alt="Hammam" src="'.WP_CONTENT_URL.'/uploads/2019/07/hammam-blanc.png"><p>Hammam</p></div>';
 								break;
 
 							case 'Piscine':
-								echo '<div class="service"><img alt="Piscine" src="http://15.188.4.60/wp-content/uploads/2019/07/piscine-blanc.png"><p>Piscine</p></div>';
+								echo '<div class="service"><img alt="Piscine" src="'.WP_CONTENT_URL.'/uploads/2019/07/piscine-blanc.png"><p>Piscine</p></div>';
 								break;
 
 							case 'Jacuzzi intérieur':
-								echo '<div class="service"><img alt="Jacuzzi" src="http://15.188.4.60/wp-content/uploads/2019/07/jacuzzi-blanc.png"><p>Jacuzzi</p></div>';
+								echo '<div class="service"><img alt="Jacuzzi" src="'.WP_CONTENT_URL.'/uploads/2019/07/jacuzzi-blanc.png"><p>Jacuzzi</p></div>';
 								break;
 
 							case 'Jacuzzi extérieur':
-								echo '<div class="service"><img alt="Jacuzzi extérieur" src="http://15.188.4.60/wp-content/uploads/2019/07/jacuzzi-ext-blanc.png"><p>Jacuzzi extérieur</p></div>';
+								echo '<div class="service"><img alt="Jacuzzi extérieur" src="'.WP_CONTENT_URL.'/uploads/2019/07/jacuzzi-ext-blanc.png"><p>Jacuzzi extérieur</p></div>';
 								break;
 
 							case 'Local à ski':
-								echo '<div class="service"><img alt="Local à ski" src="http://15.188.4.60/wp-content/uploads/2019/07/ski-blanc.png"><p>Local à ski</p></div>';
+								echo '<div class="service"><img alt="Local à ski" src="'.WP_CONTENT_URL.'/uploads/2019/07/ski-blanc.png"><p>Local à ski</p></div>';
 								break;
 
 							case 'Salle de cinéma':
-								echo '<div class="service"><img alt="Salle de cinéma" src="http://15.188.4.60/wp-content/uploads/2019/07/cine-blanc.png"><p>Salle de cinéma</p></div>';
+								echo '<div class="service"><img alt="Salle de cinéma" src="'.WP_CONTENT_URL.'/uploads/2019/07/cine-blanc.png"><p>Salle de cinéma</p></div>';
 								break;
 
 							case 'Vue panoramique':
-								echo '<div class="service"><img alt="Vue panoramique" src="http://15.188.4.60/wp-content/uploads/2019/07/panorama-blanc.png"><p>Vue panoramique</p></div>';
+								echo '<div class="service"><img alt="Vue panoramique" src="'.WP_CONTENT_URL.'/uploads/2019/07/panorama-blanc.png"><p>Vue panoramique</p></div>';
 								break;
 
 							default:
-								echo '<div class="service"><img alt="Vue panoramique" src="http://15.188.4.60/wp-content/uploads/2019/07/vue.png"><p>Vue panoramique</p></div>';
+								echo '<div class="service"><img alt="Vue panoramique" src="'.WP_CONTENT_URL.'/uploads/2019/07/vue.png"><p>Vue panoramique</p></div>';
 								
 								break;
 						}
@@ -301,8 +301,11 @@ get_header(); ?>
 		<form action="traitement-formulaire.php" method="post">
 
 			<div id="formName" class="form-input">
-				<label for="contact_name">Nom</label>
-				<input type="text" name="contact_name">
+				<label for="contact_last_name">Nom</label>
+				<input type="text" name="contact_last_name">
+			</div>
+
+			<div id="formFirstMail" class="form-input">
 				<label for="contact_first_name">Prénom</label>
 				<input type="text" name="contact_first_name">
 			</div>
@@ -317,9 +320,9 @@ get_header(); ?>
 				<input type="textarea" name="contact_message">
 			</div>
 
-			<div id="c">
-		        <button type="submit">Envoyer le message</button>
-		    </div>
+			
+		     <button id="formSubmit" type="submit">Envoyer le message</button>
+		    
 
 		</form>
 		
