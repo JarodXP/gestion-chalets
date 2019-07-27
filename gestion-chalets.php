@@ -169,7 +169,7 @@ function load_chalets_vente_template( $single_template ) {
     global $post;
 
     if ( 'chalets_vente' === $post->post_type ) {
-        $single_template = dirname( __FILE__ ) . '/single-chalets_vente.php';
+        $single_template = dirname( __FILE__ ) . '/templates/single-chalets_vente.php';
     }
 
     return $single_template;
@@ -184,7 +184,7 @@ function load_chalets_location_template( $single_template ) {
     global $post;
 
     if ( 'chalets_location' === $post->post_type ) {
-        $single_template = dirname( __FILE__ ) . '/single-chalets_location.php';
+        $single_template = dirname( __FILE__ ) . '/templates/single-chalets_location.php';
     }
 
     return $single_template;
