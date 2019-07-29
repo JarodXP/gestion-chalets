@@ -483,8 +483,8 @@ h3{
 }
 
 .form-input input{
-	width: 100%
-	background-color:white;
+	width: 100%;
+	background-color:white!important;
 	color: #25303c;
 
 }
@@ -499,6 +499,7 @@ h3{
 	height: 20vh!important;
 	display: block;
 	width: 100%;
+
 }
 
 #formSubmit{
