@@ -281,16 +281,9 @@ get_header(); ?>
 			</div>
 		</div>
 
-		<div id="fixedBtnWrapper" class="CTABtn-visible">
-
-			<div id="btnContact" class="button-wrapper">
-				<span>CONTACTER L'AGENCE</span>
-			</div>			
-		</div>
-		<span id="arrowBtn" class="arrowCTA-visible">></span>
-
 	</section>
 
+	<?php include_once 'btn-CTA.php';?>
 	<aside id="contactForm" class="contact-form-hidden">		
 
 		<?php 

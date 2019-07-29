@@ -270,8 +270,6 @@ h3{
 	display: none;
 }
 
-
-
 #fixedBtnWrapper{
 	position: fixed;
 	right:0px;
@@ -328,7 +326,6 @@ h3{
 	background-color: #25303c;
 
 }
-
 
 #btnContact {
 	width: 200px;
@@ -450,7 +447,7 @@ h3{
 /*----------------CONTACT FORM--------------*/
 #contactForm{
 	position: fixed;
-	top:20vh;
+	top:10vh;
 	right: 0px;
 	width: 40vw;
 	background-color: #25303c;
@@ -520,5 +517,15 @@ h3{
 	background-color: #6ec1e4!important;
 	border-color: #6ec1e4!important;
 	color: #25303c!important;
+}
+
+#blocDates{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+#blocDates .form-input{
+	width: 40%;
 }
 

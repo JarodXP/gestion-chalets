@@ -27,15 +27,18 @@
     	if ($typeChalet=='location'){
     		?>
 
-    		<div id="formDateDu" class="form-input">
-				<label for="date_du">Date d'arrivée</label>
-				<input type="date" name="date_du">
-			</div>
+    		<div id="blocDates">
+    			<div id="formDateDu" class="form-input">
+					<label for="date_du">Date d'arrivée</label>
+					<input type="date" name="date_du">
+				</div>
 
-			<div id="formDateAu" class="form-input">
-				<label for="date_au">Date de départ</label>
-				<input type="date" name="date_au">
-			</div>
+				<div id="formDateAu" class="form-input">
+					<label for="date_au">Date de départ</label>
+					<input type="date" name="date_au">
+				</div>
+    			
+    		</div>
 	<?php
     	}?>    
 

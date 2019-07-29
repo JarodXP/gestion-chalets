@@ -125,8 +125,6 @@ function addEventsArrowCTA(){
 	})
 }
 
-
-
 //---------------FORMULAIRE DE CONTACT -------------
 function addEventBtnCTA(){
 	var contactForm=document.getElementById("contactForm");
