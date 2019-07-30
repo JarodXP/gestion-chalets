@@ -1,9 +1,12 @@
-<form id="formulaire" action="http://chaletsetcaviar.jarod-xp.com/wp-content/plugins/gestion-chalets/templates/traitement-formulaire.php" method="post">
+<form id="formulaire" action="https://chaletsetcaviar.jarod-xp.com/wp-content/plugins/gestion-chalets/templates/traitement-formulaire.php" method="post">
 
 	<div id="formName" class="form-input">
 		<label for="contact_last_name">Nom</label>
 		<input type="text" name="contact_last_name" maxlength="50">
 		<input type="hidden" name="email" maxlength="50" required>
+		<input type="hidden" name="pageURL"<?php echo 'value="http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'].'"';?>>
+		<input type="hidden" name="typeChalet"<?php echo 'value="'.$typeChalet.'"';?>>
+		<input type="hidden" name="nomChalet"<?php echo 'value="'.$nomChalet.'"';?>>
 	</div>
 
 	<div id="formFirstName" class="form-input">
@@ -19,12 +22,9 @@
 	<div id="formMessage" class="form-input">
 		<label for="contact_message">Message</label>
 		<input type="textarea" name="contact_message" maxlength="400" required>
-	</div>
-	
-    <button id="formSubmit" type="submit">Envoyer le message</button>
+	</div>	
 
-    <?php 
-
+	<?php 
     	if ($typeChalet=='location'){
     		?>
 
@@ -41,6 +41,8 @@
     			
     		</div>
 	<?php
-    	}?>    
+    	}?> 		
+
+    <button id="formSubmit" type="submit">Envoyer le message</button>   
 
 </form>

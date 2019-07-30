@@ -12,6 +12,8 @@ function chalets_vente_layout_class( $class ) {
 }
 add_filter( 'ocean_post_layout_class', 'chalets_vente_layout_class', 20 );
 
+$nomChalet=get_the_title();
+
 //Récupère header OceanWP
 get_header(); ?>
 
