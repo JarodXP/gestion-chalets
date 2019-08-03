@@ -1,7 +1,7 @@
-<div id="fixedBtnWrapper" class="CTABtn-visible">
-	<div id="btnContact" class="button-wrapper">
+<div id="fixedBtnWrapper" class="CTABtn-hidden CTA-wrapper CTA-wrapper-blanc">
+	<div id="btnContact" class="CTA-btn CTA-btn-blanc">
 		<span>CONTACTER L'AGENCE</span>
 	</div>			
 </div>
 
-<span id="arrowBtn" class="arrowCTA-visible">></span>
+<span id="arrowBtn" class="arrowCTA-hidden">CONTACT</span>

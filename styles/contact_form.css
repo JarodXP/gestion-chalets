@@ -1,0 +1,87 @@
+/*----------------CONTACT FORM--------------*/
+#contactForm{
+	position: fixed;
+	top:10vh;
+	right: 0px;
+	width: 40vw;
+	background-color: #25303c;
+	padding: 5vh 5vw;
+	z-index: 10;
+	box-shadow: 6px 6px 6px black;
+	color: white;
+	box-sizing: border-box;
+}
+
+.contact-form-hidden{
+	display: none;
+}
+
+.contact-form-display{
+	display: block;
+	transition: all 0.3s ease;
+}
+
+#contactForm>form{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+
+}
+
+.form-input {
+	padding: 1% 0;
+	font-size: 0.8em;
+	width: 100%;
+
+}
+
+.form-input input{
+	width: 100%;
+	background-color:white!important;
+	color: #25303c;
+
+}
+
+#formName>input,#formFirstMail>input,#formMail>input{
+	min-height: 5vh!important;
+	height: 5vh!important;
+}
+
+#formMessage>input{
+	border-radius: 3px!important;
+	height: 20vh!important;
+	display: block;
+	width: 100%;
+
+}
+
+#formSubmit{
+	width: 200px;
+	height: 65px;
+	border:3px solid white!important;
+	background-color: #25303c!important;
+	color: white!important;
+	box-sizing: border-box!important;
+	cursor: pointer!important;
+	margin: 2vh 0!important;
+
+}
+
+#formSubmit:hover {
+	background-color: #6ec1e4!important;
+	border-color: #6ec1e4!important;
+	color: #25303c!important;
+}
+
+#blocDates{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+#blocDates .form-input{
+	width: 40%;
+}
+
+

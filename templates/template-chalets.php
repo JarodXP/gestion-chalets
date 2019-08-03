@@ -1,5 +1,37 @@
 <?php
 
+function enqueue_css_single_chalet(){
+	wp_enqueue_style( 'single_chalet', plugins_url( 'gestion-chalets/styles/single_chalet.css'),array(), false, 'all' );
+	wp_enqueue_style( 'slider', plugins_url( 'gestion-chalets/styles/slider.css'),array(), false, 'all' );
+	wp_enqueue_style( 'btn_CTA', plugins_url( 'gestion-chalets/styles/btn_CTA.css'),array(), false, 'all' );
+	wp_enqueue_style( 'contact_form', plugins_url( 'gestion-chalets/styles/contact_form.css'),array(), false, 'all' );
+
+}
+
+function enqueue_js_contactForm(){
+    wp_enqueue_script( 'cta-contact-form', plugins_url( 'gestion-chalets/js/cta-contact-form.js' ),array(), false, true );
+}
+
+function enqueue_js_swipe(){
+    wp_enqueue_script( 'swipe', plugins_url( 'gestion-chalets/js/swipe.js'),array(), false, true );
+}
+
+function enqueue_js_slider(){
+    wp_enqueue_script( 'slider', plugins_url( 'gestion-chalets/js/slider.js'),array(), false, true );
+}
+
+function enqueue_js_responsive(){
+	wp_enqueue_script( 'responsive', plugins_url( 'gestion-chalets/js/responsive.js'),array(), false, true );
+}
+
+
+add_action( 'wp_enqueue_scripts', 'enqueue_css_single_chalet');
+add_action( 'wp_enqueue_scripts', 'enqueue_js_contactForm');
+add_action( 'wp_enqueue_scripts', 'enqueue_js_swipe');
+add_action( 'wp_enqueue_scripts', 'enqueue_js_slider');
+add_action( 'wp_enqueue_scripts', 'enqueue_js_responsive');
+
+
 //Permet de passer en layout pleine largeur
 function chalets_vente_layout_class( $class ) {
 
@@ -32,7 +64,15 @@ get_header(); ?>
 			<div id="lightFilter">
 			</div>
 			<div id="caracQuartier" class ="caracteristiqueChalet">Quartier : <?php the_field("gc_quartier");?></div>
-			<div id="caracPrix" class ="caracteristiqueChalet">Prix : <?php echo number_format(get_field("gc_prix"),0,","," ") ;?> €</div>
+			<div id="caracPrix" class ="caracteristiqueChalet">Prix : 
+				<?php // Champs différent si location
+					if($typeChalet == "vente"){
+						echo number_format(get_field("gc_prix"),0,","," ").'€' ;
+					}
+					else{
+						echo 'A partir de '.number_format(get_field("gc_tarif"),0,","," ").'€ / sem' ;
+					}
+				?></div>
 			<div id="caracSuperficie" class ="caracteristiqueChalet">Superficie : <?php the_field("gc_superficie");?> m²</div>
 
 			<div id="sliderThumbnails">

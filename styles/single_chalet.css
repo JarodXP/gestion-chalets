@@ -1,0 +1,239 @@
+
+
+.caracteristiqueChalet{
+	background-color: #6ec1e4;
+	color: white;
+	position: absolute;
+	padding: 0 2vw;
+	font-weight:bold;
+	font-size: 1.1em;
+	box-shadow: 6px 6px 6px #25303c;
+}
+
+#caracQuartier{
+	top:15%;
+}
+
+#caracPrix{
+	top:40%;
+}
+
+#caracSuperficie{
+	top:65%;
+}
+
+#sectionCaracteristiques{
+	background-color: white;	
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+	margin: ;
+	margin-top: 20vh;	
+}
+
+h3{
+	font-family: "Playfair Display", sans-serif!important;
+	font-size: 35px!important;
+	font-weight:700!important;
+}
+
+#tableauServices{
+	background: #25303c; /* Old browsers */
+	background: -moz-linear-gradient(-45deg, #25303c 1%, #3a5266 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(-45deg, #25303c 1%,#3a5266 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(135deg, #25303c 1%,#3a5266 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#25303c', endColorstr='#3a5266',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	width:20vw;
+	color: #6ec1e4;
+	padding: 2vh;
+	box-shadow: 6px 6px 6px #25303c;
+	position: relative;
+	top: -20vh;
+	right: 5vw;
+}
+
+#tableauServices h4{
+	margin: 2vh auto;
+	font-size: 1.2em;
+	color: white;
+	text-align: center;
+	font-family: "Playfair Display";
+	letter-spacing: 1px;
+}
+
+#listeServices{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	min-height: 50vh;
+}
+
+.service img{
+	display: block;
+	margin: 0px 10px;
+	max-width: 30px;
+}
+
+.service p{
+	margin: 0px!important;
+	color: white;
+}
+
+.service{
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	margin: 2vh;
+}
+
+#toucheArchi{
+	font-style: italic;
+	color: white;
+	margin: 2vh auto;
+	padding: 0 5%;
+	font-size: 1.2em;
+}
+
+#descriptif{
+	width: 65vw;
+	margin: 0 5vw;
+	font-size: 1.3em!important;
+	font-weight: 300!important;
+	margin: 10vh 5vw 0 0;
+}
+
+#descriptif>h3, #descriptif>p{
+	margin-left: 5vw;
+}
+
+#features{
+	margin-top: 10vh;
+}
+
+.titreFeature{
+	font-size: 1em;
+	text-align: center;
+	font-weight: 700;
+}
+
+#disposition{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	margin: 10vh 0;
+}
+
+#disposition img{
+	display: block;
+	width:30px;
+	margin:0 5%;
+}
+
+.caseDispo{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	width:20%;
+	margin:0;
+}
+
+.caseDispo p{
+	margin:0 5%;
+	padding: 0;
+	font-size: 0.8em;
+}
+
+#amenagements{
+	width: 100vw;
+	display: flex;
+	justify-content: space-between;
+	align-items: stretch;
+	background-color: white;
+}
+
+#amenagements img{
+	display: block;
+	width:30px;
+	margin:0 5%;
+}
+
+#amenagements>div{
+	width: 49.75vw;
+}
+
+#exterieur,#interieur{
+	background-position:center;
+	background-size: cover;
+	min-height: 60vh;
+}
+
+.bloc-amenagement{
+	position: relative;
+	top:0px;
+	left: 15vw;
+	padding: 2vh 1vw;
+	background-color: white;
+	width: 20vw;
+	display: flex;
+	flex-direction: column;
+}
+
+.amenagement-interieur,.amenagement-exterieur {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	margin: 1vh 0;
+}
+
+.amenagement-interieur>p,.amenagement-exterieur>p{
+	padding: 0px;
+	margin: 0px;
+	font-size: 0.8em;
+}
+
+/*-----------------------RESPONSIVE-----------------*/
+@media (max-width: 768px) and (orientation:portrait){
+
+	
+
+	#sectionCaracteristiques {
+		flex-direction: column-reverse;
+	}
+
+	#tableauServices {
+		position: static;
+		width: 90vw;
+		margin-top: -10vh;
+	}
+
+	#descriptif {
+		width: 100vw;
+		margin: 5vh 5vw 0 0;
+	}
+
+	#descriptif > h3{
+		font-size: 1.4em !important;
+	}
+
+	#disposition {
+		align-items: stretch;
+	}
+
+	.caseDispo {
+		margin: 0 3vw;
+		height: 100%;
+	}
+
+	.caseDispo p {
+		text-align: center;
+	}
+
+	.bloc-amenagement {
+		position: static;
+		width: 90%;
+		margin: -1px auto;
+	}
+
+}

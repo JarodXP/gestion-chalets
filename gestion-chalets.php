@@ -38,7 +38,7 @@ function wpm_custom_post_type() {
 		'description'         => __( 'Tous les chalets à vendre', 'OceanWP'),
 		'labels'              => $labels,
         'menu_icon'           => 'dashicons-admin-multisite',
-		'supports'            => array( 'title', ),
+		'supports'            => array( 'title','thumbnail' ),
 		
 		//Options supplémentaires
 		
@@ -105,7 +105,7 @@ function wpn_custom_post_type() {
 		'description'         => __( 'Tous les chalets à louer', 'OceanWP'),
 		'labels'              => $labels,
         'menu_icon'           => 'dashicons-admin-multisite',
-		'supports'            => array( 'title', ),
+		'supports'            => array( 'title', 'thumbnail'),
 		
 		//Options supplémentaires
 		
@@ -141,19 +141,6 @@ function prefix_gallery_metabox2( $types ) {
 add_filter( 'ocean_gallery_metabox_post_types', 'prefix_gallery_metabox2' );
 
 //**********************TEMPLATES *********************************************
-
-//Chalets à vendre-------------------------------
-
-function enqueue_css_chalet(){
-    wp_enqueue_style( 'styles_chalets', plugins_url( 'styles/styles_chalets.css', __FILE__ ));
-}
-
-function enqueue_js_chalet(){
-    wp_enqueue_script( 'js-chalet', plugins_url( 'js/js-chalet.js', __FILE__ ),array(), false, true );
-}
-
-add_action( 'wp_enqueue_scripts', 'enqueue_css_chalet');
-add_action( 'wp_enqueue_scripts', 'enqueue_js_chalet');
 
 //Supprime la metabox "attributs"
 function hide_meta_box_attributes( $hidden, $screen) {
@@ -194,4 +181,31 @@ function load_chalets_location_template( $single_template ) {
 add_filter( 'single_template', 'load_chalets_location_template' );
 
 
+//----------------------STYLES---------------------------------
 
+//Général
+function enqueue_css_chalet(){
+
+    wp_enqueue_style( 'styles_chalets', plugins_url( 'styles/styles_chalets.css', __FILE__ ));
+}
+
+//liste chalets
+function enqueue_css_home(){
+	$pageURL="https://{$_SERVER['HTTP_HOST']}{$_SERVER['REQUEST_URI']}";
+	if($pageURL=="https://chaletsetcaviar.jarod-xp.com/"){
+		wp_enqueue_style( 'home', plugins_url( 'styles/home.css', __FILE__ ));
+	}
+}
+
+//liste chalets
+function enqueue_css_liste_chalets(){
+	$pageURL="https://{$_SERVER['HTTP_HOST']}{$_SERVER['REQUEST_URI']}";
+	if($pageURL=="https://chaletsetcaviar.jarod-xp.com/chalet-de-prestige-a-louer/"||$pageURL=="https://chaletsetcaviar.jarod-xp.com/chalets-de-prestige-a-vendre/"){
+		wp_enqueue_style( 'liste_chalets', plugins_url( 'styles/liste_chalets.css', __FILE__ ));
+		wp_enqueue_style( 'btn_CTA', plugins_url( 'styles/btn_CTA.css', __FILE__ ));
+	}
+}
+
+add_action( 'wp_enqueue_scripts', 'enqueue_css_chalet');
+add_action( 'wp_enqueue_scripts', 'enqueue_css_home');
+add_action( 'wp_enqueue_scripts', 'enqueue_css_liste_chalets');

@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display+SC&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display+SC|Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300&display=swap');
+
+/*-------------------------------ELEMENTOR------------------------------------*/
+[data-id="1561a9c"]>.elementor-container{
+	overflow: hidden;
+}
+
+[data-id="7c7a52c"]>.elementor-column-wrap{
+	padding-left: 0px!important;
+}
+
+
+
+/*-------------------------------PLUGIN APL-----------------------------------*/
+#sectionPostList{
+	max-width: 100vw!important;
+	width: 100vw!important;
+}
+
+#sectionPostList>.elementor-container{
+	max-width: 100vw!important;
+	width: 100vw!important;
+}
+
+.list-chalet-item{
+	background: #25303c; /* Old browsers */
+	background: -moz-linear-gradient(-45deg, #25303c 1%, #3a5266 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(-45deg, #25303c 1%,#3a5266 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(135deg, #25303c 1%,#3a5266 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#25303c', endColorstr='#3a5266',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	width: 90vw;
+	height: 50vh;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: row;
+	margin:5% auto;
+	box-shadow: 3px 3px 6px #25303c;
+}
+
+.list-chalet-item:hover{
+	width: 92vw;
+	box-shadow: 10px 10px 10px #25303c;
+}
+
+.list-img-chalet{
+	background-position:center;
+	background-size:cover;
+	width: 50%;
+	height: 100%;
+
+}
+
+.list-infos{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	width: 50%;
+	height: 100%;
+	font-family: Roboto,Sans-serif;
+	padding: 5%!important;
+	color: white;
+}
+
+.list-title{
+	font-size: 1.5em;
+	font-family:"Playfair Display", Sans-serif!important;
+}
+
+.list-description{
+	font-family: Roboto,Sans-serif;
+	color: white;
+	font-weight: 300;
+}
+
+@media (max-width: 768px) and (orientation:portrait){
+
+	.titrePage h1{
+		font-size:2em;
+	}
+
+	.list-chalet-item {
+		width: 90VW;
+		height: 120vh;
+		flex-direction: column;
+	}
+
+	.list-img-chalet {
+		width: 100%;
+		height: 50%;
+	}
+
+	.list-infos {
+		width: 100%;
+		height: 50%;
+	}
+}

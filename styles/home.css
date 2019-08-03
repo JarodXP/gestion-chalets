@@ -1,0 +1,39 @@
+/*----------------------------HEADER------------------------------------*/
+#headerVideo{
+	width: 100vw!important;
+}
+
+#headerVideo>div{
+	display: block!important;
+}
+
+#site-navigation span{
+	font-family: Roboto;
+    font-weight: 300;
+    font-size: 1.2em;
+}
+
+/*-----------------------RESPONSIVE-----------------*/
+@media (max-width: 768px) and (orientation:portrait){
+
+	[data-id="2cd3fd03"]>.elementor-column-wrap{
+		display: none;
+	}
+
+	#sectionQuote{
+		margin-top: 7vh!important;
+	}
+
+	[data-id="ddd070a"]>.elementor-column-wrap{
+		margin-left:0px!important;
+	}
+
+	#sectionQuote>.elementor-container>.elementor-row{
+		flex-direction: column-reverse;
+	}
+
+	#sousSectionCourchevel h3{
+		font-size: 2em!important;
+	}
+
+}
