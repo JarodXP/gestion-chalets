@@ -156,20 +156,11 @@
 	#sectionSlider {
 		left: 0px;
 		width: 100vw;
-		transition: height 1000000s ease;
-		-webkit-transition: height 1000000s ease;
-		-moz-transition: height 1000000s ease;
-		-o-transition: height 1000000s ease;
-
 	}
 
 	#sliderChalet {
 		border: 10px solid #fff;
 		width: 95vw;
-		transition: height 1000000s ease;
-		-webkit-transition: height 1000000s ease;
-		-moz-transition: height 1000000s ease;
-		-o-transition: height 1000000s ease;
 	}
 
 	#sliderChalet::before,#sliderChalet::after{
@@ -178,10 +169,6 @@
 
 	#sliderThumbnails {
 		height: 10vh;
-		transition: height 1000000s ease;
-		-webkit-transition: height 1000000s ease;
-		-moz-transition: height 1000000s ease;
-		-o-transition: height 1000000s ease;
 	}
 
 	#lightFilter::before,#lightFilter::after {

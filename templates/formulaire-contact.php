@@ -21,7 +21,7 @@
 
 	<div id="formMessage" class="form-input">
 		<label for="contact_message">Message</label>
-		<input type="textarea" name="contact_message" maxlength="400" required>
+		<textarea name="contact_message" rows="3" cols="40"  wrap="hard" required></textarea>  
 	</div>	
 
 	<?php 

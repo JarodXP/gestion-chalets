@@ -36,14 +36,14 @@
 
 }
 
-.form-input input{
+.form-input input, .form-input textarea{
 	width: 100%;
 	background-color:white!important;
 	color: #25303c;
 
 }
 
-#formName>input,#formFirstMail>input,#formMail>input{
+#formName input,#formFirstName input,#formMail input{
 	min-height: 5vh!important;
 	height: 5vh!important;
 }
@@ -84,4 +84,25 @@
 	width: 40%;
 }
 
+@media (max-width: 768px) or (orientation:portrait){
+	#contactForm {
+		width: 80vw;
+		padding: 1vh 5vw;
+		overflow: hidden;
+		top: 0vh;
+	}
 
+	.arrowCTA-close {
+		right: 80vw;
+	}
+	
+	#blocDates {
+		justify-content: center;
+		flex-direction: column;
+	}
+
+	#blocDates .form-input {
+	width: 70%;
+	margin: 0 auto;
+	}
+}
