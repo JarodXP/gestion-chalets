@@ -189,13 +189,21 @@ function enqueue_css_chalet(){
     wp_enqueue_style( 'styles_chalets', plugins_url( 'styles/styles_chalets.css', __FILE__ ));
 }
 
-//liste chalets
+//Acceuil
 function enqueue_css_home(){
+
 	$pageURL="https://{$_SERVER['HTTP_HOST']}{$_SERVER['REQUEST_URI']}";
 	if($pageURL=="https://chaletsetcaviar.jarod-xp.com/"){
 		wp_enqueue_style( 'home', plugins_url( 'styles/home.css', __FILE__ ));
+		wp_enqueue_style( 'contact_form', plugins_url( 'styles/contact_form.css', __FILE__ ));
+
 	}
 }
+
+function enqueue_js_home(){
+	wp_enqueue_script( 'cta-contact-form', plugins_url( 'js/cta-contact-form.js', __FILE__ ),array(), false, true );
+}
+
 
 //liste chalets
 function enqueue_css_liste_chalets(){
@@ -208,4 +216,9 @@ function enqueue_css_liste_chalets(){
 
 add_action( 'wp_enqueue_scripts', 'enqueue_css_chalet');
 add_action( 'wp_enqueue_scripts', 'enqueue_css_home');
+add_action( 'wp_enqueue_scripts', 'enqueue_js_home');
 add_action( 'wp_enqueue_scripts', 'enqueue_css_liste_chalets');
+
+//-------------------------SHORTCODES----------------------
+include_once 'php_functions/shortcodes.php';
+

@@ -19,9 +19,28 @@ body{
 
 }
 
-/*Logo Nav*/
+/*Menus*/
+
 #site-logo img{
 	height:100%;
+}
+
+#site-navigation span{
+	font-family: Roboto;
+    font-weight: 300;
+    font-size: 1.2em;
+}
+
+#menu-footer{
+	display: flex;
+	justify-content: space-around;
+}
+
+#footer-widgets{
+	background-color: #25303c!important;
+	padding: 10px 0!important;
+	margin: 0!important;
+	border-top: 3px solid white!important;
 }
 
 

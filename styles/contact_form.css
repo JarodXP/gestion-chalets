@@ -1,16 +1,4 @@
 /*----------------CONTACT FORM--------------*/
-#contactForm{
-	position: fixed;
-	top:10vh;
-	right: 0px;
-	width: 40vw;
-	background-color: #25303c;
-	padding: 5vh 5vw;
-	z-index: 10;
-	box-shadow: 6px 6px 6px black;
-	color: white;
-	box-sizing: border-box;
-}
 
 .contact-form-hidden{
 	display: none;
@@ -85,13 +73,7 @@
 }
 
 @media (max-width: 768px) or (orientation:portrait){
-	#contactForm {
-		width: 80vw;
-		padding: 1vh 5vw;
-		overflow: hidden;
-		top: 0vh;
-	}
-
+	
 	.arrowCTA-close {
 		right: 80vw;
 	}

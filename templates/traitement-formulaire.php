@@ -9,9 +9,13 @@ if(isset($_POST['email']) && $_POST['email']==""){
 		error_log('Nom chalet: '.$nomChalet);
 	}
 
-	if(isset($_POST['typeChalet']) && preg_match('/^[a-zA-Z]{1,8}$/', $_POST['typeChalet'])){
-		$typeChalet=strip_tags($_POST['typeChalet']);
-		error_log('Type chalet: '.$typeChalet);
+		//Si vient de la page d'accueil, pas de traitement du type chalet.
+	if(isset($_POST['pageURL']) && $_POST['pageURL']!='https://chaletsetcaviar.jarod-xp.com/'){
+		error_log($_POST['pageURL']);
+		if(isset($_POST['typeChalet']) && preg_match('/^[a-zA-Z]{1,8}$/', $_POST['typeChalet'])){
+			$typeChalet=strip_tags($_POST['typeChalet']);
+			error_log('Type chalet: '.$typeChalet);
+		}
 	}
 
 	if(isset($_POST['contact_last_name']) && preg_match('/^[a-zA-ZáàâäãåçéèêëíìîïñóòôöõúùûüýÿæœÁÀÂÄÃÅÇÉÈÊËÍÌÎÏÑÓÒÔÖÕÚÙÛÜÝŸÆŒ-]{1,50}$/', $_POST['contact_last_name'])){
@@ -66,7 +70,7 @@ if(isset($_POST['email']) && $_POST['email']==""){
      }
 
 	try{
-		mail($email,$subject,$message,$headers);
+		mail("gregory.barile@gmail.com",$subject,$message,$headers);
 	}
 
 	catch(Exception $e){

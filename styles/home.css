@@ -7,14 +7,28 @@
 	display: block!important;
 }
 
-#site-navigation span{
-	font-family: Roboto;
-    font-weight: 300;
-    font-size: 1.2em;
+#contactForm {
+	width: 100vw;
+	background-color: #25303c;
+	padding: 5vh 30vw;
+	color: white;
+	box-sizing: border-box;
+}
+
+[data-id="d867cc3"]>div{
+	padding: 0px!important;
+}
+
+[data-id="0aaef67"]>div{
+	margin: 0px!important;
 }
 
 /*-----------------------RESPONSIVE-----------------*/
-@media (max-width: 768px) and (orientation:portrait){
+@media (max-width: 768px) or (orientation:portrait){
+
+	#contactForm {
+			padding: 5vh 5vw;
+	}
 
 	[data-id="2cd3fd03"]>.elementor-column-wrap{
 		display: none;

@@ -8,6 +8,10 @@ function enqueue_css_single_chalet(){
 
 }
 
+function enqueue_js_toggleCTA(){
+    wp_enqueue_script( 'toggleCTA', plugins_url( 'gestion-chalets/js/toggleCTA.js' ),array(), false, true );
+}
+
 function enqueue_js_contactForm(){
     wp_enqueue_script( 'cta-contact-form', plugins_url( 'gestion-chalets/js/cta-contact-form.js' ),array(), false, true );
 }
@@ -26,6 +30,7 @@ function enqueue_js_responsive(){
 
 
 add_action( 'wp_enqueue_scripts', 'enqueue_css_single_chalet');
+add_action( 'wp_enqueue_scripts', 'enqueue_js_toggleCTA');
 add_action( 'wp_enqueue_scripts', 'enqueue_js_contactForm');
 add_action( 'wp_enqueue_scripts', 'enqueue_js_swipe');
 add_action( 'wp_enqueue_scripts', 'enqueue_js_slider');
